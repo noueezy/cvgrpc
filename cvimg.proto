@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package cvimg;
+
+message cvimgRequest{
+
+}
+
+message cvimgResponse{
+    string meta = 1;
+    bytes data = 2;
+}
+
+service cvimgService{
+    rpc SendImage (cvimgRequest) returns (cvimgResponse) {}
+}
